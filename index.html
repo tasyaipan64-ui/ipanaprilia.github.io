@@ -1,33 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Website Ipan Aprillia</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ipan Aprillia | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(-45deg,#0f172a,#1e3a8a,#2563eb,#06b6d4);
+            background-size:400% 400%;
+            animation:bgMove 12s ease infinite;
+            color:white;
+            overflow:hidden;
+        }
+
+        @keyframes bgMove{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+
+        nav{
+            width:100%;
+            padding:20px;
+            text-align:center;
+            background:rgba(0,0,0,0.2);
+            backdrop-filter:blur(8px);
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#ffd700;
+        }
+
+        .hero{
+            height:90vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            animation:fadeDown 1.5s ease;
+        }
+
+        .hero p{
+            max-width:700px;
+            margin-top:20px;
+            font-size:1.2rem;
+            line-height:1.8;
+            animation:fadeUp 2s ease;
+        }
+
+        .typing{
+            color:#ffd700;
+            font-weight:bold;
+        }
+
+        .btn{
+            margin-top:30px;
+            padding:15px 35px;
+            background:white;
+            color:#1e3a8a;
+            text-decoration:none;
+            border-radius:50px;
+            font-weight:bold;
+            transition:0.4s;
+        }
+
+        .btn:hover{
+            transform:translateY(-5px);
+            box-shadow:0 0 25px white;
+        }
+
+        @keyframes fadeDown{
+            from{
+                opacity:0;
+                transform:translateY(-50px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes fadeUp{
+            from{
+                opacity:0;
+                transform:translateY(50px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        footer{
+            position:absolute;
+            bottom:20px;
+            width:100%;
+            text-align:center;
+        }
+    </style>
 </head>
+
 <body>
 
 <nav>
-<a href="index.html">Beranda</a>
-<a href="tentang.html">Tentang</a>
-<a href="galeri.html">Galeri</a>
-<a href="kontak.html">Kontak</a>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
 </nav>
 
-<section class="hero">
-<h1>Selamat Datang</h1>
-<p>Website Pribadi Ipan Aprillia</p>
+<div class="hero">
+    <h1>Halo, Saya Ipan Aprillia 👋</h1>
 
-<audio controls autoplay loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
+    <p>
+        <span class="typing">Mahasiswa Teknik Informatika</span>
+        yang memiliki minat dalam pengembangan web, Internet of Things (IoT),
+        desain teknologi, dan inovasi digital.
+        Website ini merupakan ruang untuk berbagi karya, pengalaman,
+        serta perjalanan saya dalam dunia teknologi.
+    </p>
 
-<a class="btn" href="tentang.html">Jelajahi</a>
-</section>
+    <a href="tentang.html" class="btn">
+        Jelajahi Website
+    </a>
+</div>
 
 <footer>
-© 2026 Ipan Aprillia
+    © 2026 | Ipan Aprillia
 </footer>
+
+<audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
