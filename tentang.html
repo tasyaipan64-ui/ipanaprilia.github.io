@@ -1,36 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tentang Saya</title>
-<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+    color:white;
+    min-height:100vh;
+}
+
+nav{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.profile{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+}
+
+.photo{
+    animation:float 4s ease-in-out infinite;
+}
+
+.photo img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    box-shadow:0 0 30px rgba(255,255,255,0.4);
+}
+
+.content{
+    max-width:600px;
+    animation:slideIn 1.5s ease;
+}
+
+.content h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.content p{
+    line-height:1.8;
+    font-size:1.1rem;
+    text-align:justify;
+}
+
+.card{
+    margin-top:30px;
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+
 </head>
 <body>
 
 <nav>
-<a href="index.html">Beranda</a>
-<a href="tentang.html">Tentang</a>
-<a href="galeri.html">Galeri</a>
-<a href="kontak.html">Kontak</a>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
 </nav>
 
 <div class="container">
-<div class="card">
-<h1>Tentang Saya</h1>
 
-<p>
-Halo! Saya Ipan Aprillia,
-mahasiswa Teknik Informatika yang tertarik pada
-Web Development, IoT, dan Cyber Security.
-</p>
+<div class="profile">
 
-<br>
+<div class="photo">
+    <img src="ipan.jpg" alt="Foto Saya">
+</div>
 
-<img src="https://picsum.photos/400/300"
-width="400">
+<div class="content">
+    <h1>Tentang Saya</h1>
+
+    <p>
+        Halo! Perkenalkan, saya <b>Ipan Aprillia</b>, mahasiswi Program Studi
+        Teknik Informatika di Universitas Ngudi Waluyo dan saat ini sedang
+        menempuh pendidikan pada semester dua.
+    </p>
+
+    <br>
+
+    <p>
+        Saya memiliki ketertarikan yang besar terhadap dunia teknologi,
+        khususnya pada bidang pengembangan web, Internet of Things (IoT),
+        desain digital, dan inovasi teknologi yang dapat memberikan manfaat
+        bagi masyarakat. Sebagai mahasiswa yang masih berada pada tahap awal
+        perkuliahan, saya terus berusaha mengembangkan kemampuan melalui
+        berbagai kegiatan akademik maupun organisasi.
+    </p>
+
+    <div class="card">
+        <h3>Visi Saya</h3>
+        <p>
+            Menjadi pribadi yang mampu memanfaatkan teknologi untuk
+            menciptakan solusi yang inovatif, kreatif, dan bermanfaat bagi
+            lingkungan sekitar.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Hobi & Minat</h3>
+        <p>
+            Belajar teknologi baru, membuat desain, mengikuti kegiatan
+            organisasi kampus, membaca, serta mengembangkan proyek-proyek
+            berbasis teknologi informasi.
+        </p>
+    </div>
 
 </div>
+
 </div>
+
+</div>
+
+<footer>
+    © 2026 | Ipan Aprillia
+</footer>
 
 </body>
 </html>
