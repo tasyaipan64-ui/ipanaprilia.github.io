@@ -1,10 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Galeri</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Galeri Saya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+    color:white;
+    min-height:100vh;
+}
+
+nav{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.running-text{
+    overflow:hidden;
+    white-space:nowrap;
+    margin:25px 0;
+}
+
+.running-text h2{
+    display:inline-block;
+    animation:jalan 15s linear infinite;
+    color:#ffd700;
+}
+
+@keyframes jalan{
+    from{
+        transform:translateX(100%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding-bottom:40px;
+}
+
+.card{
+    overflow:hidden;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    animation:muncul 1s ease;
+    transition:0.5s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.card img:hover{
+    transform:scale(1.1);
+}
+
+.card p{
+    text-align:center;
+    padding:15px;
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+</style>
 </head>
+
 <body>
 
 <nav>
@@ -14,20 +132,41 @@
 <a href="kontak.html">Kontak</a>
 </nav>
 
-<div class="container">
+<div class="running-text">
+<h2>📸 Selamat Datang di Galeri Kenangan dan Aktivitas Saya 📸</h2>
+</div>
 
-<h1>Galeri</h1>
+<div class="container">
 
 <div class="gallery">
 
-<img src="https://picsum.photos/id/1/500/300">
-<img src="https://picsum.photos/id/10/500/300">
-<img src="https://picsum.photos/id/100/500/300">
-<img src="https://picsum.photos/id/200/500/300">
+<div class="card">
+<img src="foto1.jpg" alt="Foto 1">
+<p>Kegiatan Akademik</p>
+</div>
 
+<div class="card">
+<img src="foto2.jpg" alt="Foto 2">
+<p>Aktivitas Organisasi</p>
+</div>
+
+<div class="card">
+<img src="foto3.jpg" alt="Foto 3">
+<p>Momen Bersama Teman</p>
+</div>
+
+<div class="card">
+<img src="foto4.jpg" alt="Foto 4">
+<p>Pengembangan Diri</p>
 </div>
 
 </div>
+
+</div>
+
+<footer>
+© 2026 | Ipan Aprillia
+</footer>
 
 </body>
 </html>
