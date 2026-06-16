@@ -1,17 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Kontak</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kontak Saya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#2563eb,#06b6d4);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+nav{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    padding:20px;
+}
+
+.card{
+    width:700px;
+    max-width:90%;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    animation:fadeIn 1.5s ease;
+    box-shadow:0 0 25px rgba(255,255,255,0.2);
+}
+
+.card h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+    font-size:1.1rem;
+    margin-bottom:25px;
+}
+
+.info{
+    text-align:left;
+    margin-top:20px;
+}
+
+.info div{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+    background:white;
+    color:#1e3a8a;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px white;
+}
+
+.running{
+    color:#ffd700;
+    margin-bottom:20px;
+    animation:blink 2s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0.5;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+</style>
 </head>
+
 <body>
 
 <nav>
-<a href="index.html">Beranda</a>
-<a href="tentang.html">Tentang</a>
-<a href="galeri.html">Galeri</a>
-<a href="kontak.html">Kontak</a>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
 </nav>
 
 <div class="container">
@@ -20,13 +154,40 @@
 
 <h1>Hubungi Saya</h1>
 
-<p>Email : ipan@example.com</p>
-<p>Instagram : @ipanaprilia</p>
-<p>GitHub : ipanaprilia</p>
+<div class="running">
+    ✨ Mari terhubung dan berbagi pengalaman bersama ✨
+</div>
+
+<p>
+Terima kasih telah mengunjungi website saya.
+Jika Anda memiliki pertanyaan, ingin berdiskusi,
+atau menjalin kerja sama, silakan hubungi saya
+melalui kontak berikut.
+</p>
+
+<div class="info">
+    <div>📱 <b>Telepon / WhatsApp:</b> 081548125203</div>
+    <div>📧 <b>Email:</b> tasyaipan64@gmail.com</div>
+    <div>📸 <b>Instagram:</b> @priliaaaaasya30</div>
+</div>
+
+<br>
+
+<a href="https://wa.me/6281548125203" class="btn">
+    Chat WhatsApp
+</a>
+
+<a href="https://instagram.com/priliaaaaasya30" class="btn">
+    Kunjungi Instagram
+</a>
 
 </div>
 
 </div>
+
+<footer>
+    © 2026 | Ipan Aprillia
+</footer>
 
 </body>
 </html>
