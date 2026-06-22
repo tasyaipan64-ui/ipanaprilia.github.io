@@ -1,101 +1,299 @@
+/* ========================= */
+/* STYLE WEBSITE PORTOFOLIO */
+/* ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#1e3c72,#2a5298);
-    color:white;
+min-height:100vh;
+color:white;
+background:linear-gradient(
+-45deg,
+#0f172a,
+#1e293b,
+#2563eb,
+#06b6d4
+);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
 }
 
+/* Background bergerak */
+
+@keyframes bgMove{
+0%{
+background-position:0% 50%;
+}
+
+```
+50%{
+    background-position:100% 50%;
+}
+
+100%{
+    background-position:0% 50%;
+}
+```
+
+}
+
+/* Navigasi */
+
 nav{
-    background:rgba(0,0,0,0.5);
-    padding:15px;
-    text-align:center;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:25px;
+padding:20px;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:999;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
-    transition:0.3s;
+color:white;
+text-decoration:none;
+font-weight:600;
+position:relative;
+transition:0.3s;
 }
 
-nav a:hover{
-    color:yellow;
+nav a:hover
+
+nav a::after{
+content:'';
+position:absolute;
+width:0;
+height:3px;
+left:0;
+bottom:-5px;
+background:#ffd700;
+transition:0.4s;
 }
 
-.hero{
-    height:90vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+nav a:hover::after{
+width:100%;
 }
 
-.hero h1{
-    font-size:4rem;
-    animation:slide 2s ease;
+/* Judul */
+
+h1{
+text-align:center;
+margin-top:30px;
+font-size:3rem;
+animation:glow 2s infinite alternate;
 }
 
-.hero p{
-    font-size:1.3rem;
-    margin-top:10px;
+@keyframes glow{
+from{
+text-shadow:0 0 10px white;
 }
 
-.btn{
-    margin-top:20px;
-    background:white;
-    color:#1e3c72;
-    padding:12px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+```
+to{
+    text-shadow:
+    0 0 15px #ffd700,
+    0 0 25px #ffd700;
+}
+```
+
 }
 
-@keyframes slide{
-    from{
-        opacity:0;
-        transform:translateY(-50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+h2{
+text-align:center;
 }
 
-.container{
-    padding:40px;
+/* Paragraf */
+
+p{
+line-height:1.8;
 }
+
+/* Card */
 
 .card{
-    background:rgba(255,255,255,0.15);
-    padding:20px;
-    border-radius:15px;
-    margin:20px;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:25px;
+margin:20px;
+transition:0.4s;
+box-shadow:0 0 15px rgba(255,255,255,0.1);
 }
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(255,255,255,0.4);
+}
+
+/* Gambar */
+
+img{
+max-width:100%;
+border-radius:20px;
+transition:0.5s;
+}
+
+img:hover{
+transform:scale(1.05);
+}
+
+/* Galeri */
 
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:30px;
 }
 
-.gallery img{
-    width:100%;
-    border-radius:15px;
-    transition:0.5s;
+/* Video */
+
+video{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,255,255,0.3);
 }
 
-.gallery img:hover{
-    transform:scale(1.1);
+/* Tombol */
+
+button,
+.btn{
+background:white;
+color:#1e3a8a;
+border:none;
+padding:12px 25px;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+transition:0.4s;
+text-decoration:none;
+display:inline-block;
 }
+
+button:hover,
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px white;
+}
+
+/* Running Text */
+
+.marquee{
+overflow:hidden;
+white-space:nowrap;
+margin:20px 0;
+}
+
+.marquee h2{
+display:inline-block;
+color:#ffd700;
+animation:jalan 15s linear infinite;
+}
+
+@keyframes jalan{
+from{
+transform:translateX(100%);
+}
+
+```
+to{
+    transform:translateX(-100%);
+}
+```
+
+}
+
+/* Efek muncul */
+
+.fade-in{
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+```
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+```
+
+}
+
+/* Jam Digital */
+
+#jam{
+position:fixed;
+top:20px;
+right:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:10px 20px;
+border-radius:15px;
+font-weight:bold;
+}
+
+/* Tombol Kembali ke Atas */
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+border:none;
+cursor:pointer;
+font-size:20px;
+}
+
+/* Footer */
 
 footer{
-    text-align:center;
-    padding:20px;
+text-align:center;
+padding:30px;
+margin-top:30px;
+background:rgba(0,0,0,0.15);
+}
+
+/* Bintang */
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url('https://www.transparenttextures.com/patterns/stardust.png');
+pointer-events:none;
+animation:starsMove 60s linear infinite;
+}
+
+@keyframes starsMove{
+from{
+background-position:0 0;
+}
+
+```
+to{
+    background-position:0 1000px;
+}
+```
+
 }
