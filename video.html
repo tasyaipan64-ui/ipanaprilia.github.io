@@ -1,152 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galeri Video</title>
+<title>Video</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:linear-gradient(-45deg,#0f172a,#1e293b,#2563eb,#06b6d4);
-    background-size:400% 400%;
-    animation:bgMove 10s ease infinite;
-    color:white;
-}
-
-@keyframes bgMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-nav{
-    text-align:center;
-    padding:20px;
-    background:rgba(0,0,0,0.2);
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#ffd700;
-}
-
-.marquee{
-    overflow:hidden;
-    white-space:nowrap;
-    padding:15px;
-}
-
-.marquee h2{
-    display:inline-block;
-    color:#ffd700;
-    animation:jalan 15s linear infinite;
-}
-
-@keyframes jalan{
-    from{transform:translateX(100%);}
-    to{transform:translateX(-100%);}
-}
-
-.hero{
-    text-align:center;
-    padding:40px 20px;
-    animation:muncul 2s ease;
-}
-
-.hero h1{
-    font-size:3rem;
-}
-
-.hero p{
-    margin-top:15px;
-    font-size:1.1rem;
-}
-
-@keyframes muncul{
-    from{
-        opacity:0;
-        transform:translateY(50px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.gif{
-    text-align:center;
-    margin:30px 0;
-}
-
-.gif img{
-    width:250px;
-    border-radius:20px;
-    animation:float 4s infinite ease-in-out;
-}
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-    100%{transform:translateY(0);}
-}
-
-.video-container{
-    width:90%;
-    max-width:900px;
-    margin:auto;
-}
-
-video{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 0 25px rgba(255,255,255,0.4);
-}
-
-.card{
-    margin-top:25px;
-    background:rgba(255,255,255,0.1);
-    padding:25px;
-    border-radius:20px;
-    transition:0.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h2{
-    color:#ffd700;
-    margin-bottom:10px;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
+
+<div class="stars"></div>
 
 <nav>
 <a href="index.html">Beranda</a>
@@ -156,42 +20,17 @@ footer{
 <a href="kontak.html">Kontak</a>
 </nav>
 
-<div class="marquee">
-<h2>🎥 Selamat Datang di Halaman Video • Inspirasi • Teknologi • Perjalanan Saya 🎥</h2>
-</div>
+<h1>Video Saya</h1>
 
-<div class="hero">
-<h1>Galeri Video</h1>
-<p>
-Kumpulan video yang menggambarkan perjalanan,
-aktivitas, dan minat saya dalam dunia teknologi.
-</p>
-</div>
-
-<div class="gif">
-<img src="https://media.giphy.com/media/L8K62iTDkzGX6/giphy.gif" alt="Coding GIF">
-</div>
-
-<div class="video-container">
+<div class="card">
 
 <video controls>
 <source src="video1.mp4" type="video/mp4">
-Browser Anda tidak mendukung video.
 </video>
 
-<div class="card">
-<h2>📚 Tentang Video</h2>
 <p>
-Video ini merupakan bagian dari dokumentasi perjalanan saya sebagai mahasiswi Teknik Informatika Universitas Ngudi Waluyo. Melalui video ini saya ingin berbagi pengalaman, semangat belajar, dan proses pengembangan diri.
+Dokumentasi perjalanan dan aktivitas saya.
 </p>
-</div>
-
-<div class="card">
-<h2>💡 Motivasi</h2>
-<p>
-"Jangan takut memulai dari nol, karena setiap ahli juga pernah menjadi pemula."
-</p>
-</div>
 
 </div>
 
